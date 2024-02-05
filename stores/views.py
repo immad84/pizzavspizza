@@ -1,14 +1,12 @@
-from django.shortcuts import render
 from rest_framework import generics
-from .serializers import PizzariaListSerializer
 from .models import Pizzaria
-
-# Create your views here.
+from .serializers import PizzariaListSerializer
 
 class PizzariaListAPIView(generics.ListAPIView):
-	"""docstring for ClassName"""
+	"""docstring for """
 	queryset = Pizzaria.objects.all()
 	serializer_class = PizzariaListSerializer
+		
 	
 
 
