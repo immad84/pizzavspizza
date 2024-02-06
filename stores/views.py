@@ -8,18 +8,30 @@ class PizzariaListAPIView(generics.ListAPIView):
 	queryset = Pizzaria.objects.all()
 	serializer_class = PizzariaListSerializer
 
-
 class PizzariaDetailAPIView(generics.RetrieveAPIView):
 	"""docstring for ClassName"""
 	lookup_field = "id"
 	queryset = Pizzaria.objects.all()
 	serializer_class = PizzariaDetailSerializer
 
-
 class PizzariaCreateAPIView(generics.CreateAPIView):
 	"""docstring for PizzariaCreateAPIView"""
 	queryset = Pizzaria.objects.all()
 	serializer_class = PizzariaDetailSerializer
+
+class PizzariaUpdateAPIView(generics.RetrieveUpdateAPIView):
+	"""docstring for ClassName"""
+	lookup_field = "id"
+	queryset = Pizzaria.objects.all()
+	serializer_class = PizzariaDetailSerializer
+
+class PizzariaDeleteAPIView(generics.DestroyAPIView):
+	"""docstring for PizzariaDeleteAPIView"""
+	lookup_field = "id"
+	queryset = Pizzaria.objects.all()
+		
+	
+		
 
 
 	
